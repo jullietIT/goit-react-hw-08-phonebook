@@ -2,9 +2,9 @@
 import React from 'react';
 import { FilterWrapper, Title, Title2 } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { setStatusFilter } from 'redux/filtersSlice';
+import { setStatusFilter } from '../Redux/filtersSlice';
 import { nanoid } from 'nanoid';
-import { getFilter } from 'redux/selectors';
+import { getFilter } from '../Redux/selectors';
 
 const Filter = () => {
   const dispatch = useDispatch();
