@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { WrapperForm, Label, Input, Button, Title } from './ContactForm.styled';
-import { getContacts } from '../redux/selectors';
+import { getContacts } from '../../redux/contacts/selectors';
 // Импортируем хук
 import { useDispatch, useSelector } from 'react-redux';
 // Импортируем генератор экшена
 //
-import { addContacts } from '../redux/operations';
+import { addContacts } from '../../redux/contacts/operations';
 
 export const ContactForm = () => {
   // Получаем ссылку на функцию отправки экшенов
