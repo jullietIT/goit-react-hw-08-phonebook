@@ -4,8 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
-import { refreshUser } from '../redux/auth/operations';
-import { useAuth } from '../hooks/useAuth';
+import { refreshUser } from 'redux/auth/operations';
+import { useAuth } from 'hooks';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -15,13 +15,13 @@ const ContactsPage = lazy(() => import('../pages/Contacts'));
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
-  //делаем для сохранения даных после перезагрузки
+
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <b>Just one second please...</b>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -51,5 +51,3 @@ export const App = () => {
     </Routes>
   );
 };
-
-export default App;

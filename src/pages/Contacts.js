@@ -1,6 +1,6 @@
-import { ContactForm } from '../components/Fonebook/ContactForm/ContactForm';
-import ContactList from '../components/Fonebook/ContactList/ContactList';
-import Filter from '../components/Fonebook/Filter/Filter';
+import ContactForm from '../components/ContactList/ContactList';
+import ContactList from '../components/ContactList/ContactList';
+import Filter from '../components/Filter/Filter';
 
 import { Wrapper } from '../components/App.styled';
 

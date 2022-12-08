@@ -1,10 +1,9 @@
-// import React, { Component } from 'react';
 import React from 'react';
 import { FilterWrapper, Title, Title2 } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
-import { setStatusFilter } from '../Redux/filtersSlice';
+import { setStatusFilter } from '../redux/filtersSlice';
 import { nanoid } from 'nanoid';
-import { getFilter } from '../Redux/selectors';
+import { getFilter } from '../../redux/contacts/selectors';
 
 const Filter = () => {
   const dispatch = useDispatch();

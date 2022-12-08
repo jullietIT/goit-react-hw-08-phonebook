@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { WrapperForm, Label, Input, Button, Title } from './ContactForm.styled';
-import { getContacts } from '../Redux/selectors';
+import { getContacts } from '../redux/selectors';
 // Импортируем хук
 import { useDispatch, useSelector } from 'react-redux';
 // Импортируем генератор экшена
 //
-import { addContacts } from '../Redux/operations';
+import { addContacts } from '../redux/operations';
 
 export const ContactForm = () => {
   // Получаем ссылку на функцию отправки экшенов
@@ -43,6 +43,7 @@ export const ContactForm = () => {
     setName('');
     setNumber('');
   };
+
   return (
     <WrapperForm>
       <Title>Phonebook</Title>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContacts, fetchContacts } from '../Redux/operations';
+import { deleteContacts, fetchContacts } from '../../redux/contacts/operations';
 import {
   getContacts,
   getFilter,
   getIsLoading,
   getError,
-} from '../Redux/selectors';
+} from 'redux/contacts/selectors.js';
 import { useEffect } from 'react';
 import { ListContact, Button } from './ContactList.styled';
 
