@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 98px;
+  text-align: center;
+}
+.p {
+  color: #0e0e65;
+  font-size: 18px;
+  text-align: center;
+}

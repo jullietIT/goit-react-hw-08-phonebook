@@ -1,9 +1,44 @@
 .form {
-  width: 320px;
+  max-width: 768px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  /* min-height: 85vh; */
 }
 
 .label {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.input {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.input:hover {
+  background-color: #dce4ed;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px;
+  font-size: 24px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  color: #4419c6;
+}
+.button:hover {
+  background-color: rgb(104, 84, 235);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }

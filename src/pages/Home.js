@@ -1,26 +1,19 @@
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 50px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 68,
-    textAlign: 'center',
-  },
-};
+import css from './Home.module.css';
 
 export default function Home() {
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>
+    <div className={css.container}>
+      <h1 className={css.title}>
         Phonebook
         <span role="img" aria-label="Greeting icon">
           📱
         </span>
       </h1>
+      <p className={css.p}>
+        Hello! <br></br> This is an application for individual storage of your
+        contacts phone numbers.<br></br> To use it, you need to create your
+        unique account and add the numbers you need.
+      </p>
     </div>
   );
 }

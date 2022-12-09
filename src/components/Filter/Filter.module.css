@@ -1,23 +1,20 @@
-import styled from 'styled-components';
-
-export const FilterWrapper = styled.div`
+.div {
   display: flex;
   justify-content: center;
 
   align-items: center;
   flex-direction: column;
-  
-`;
+}
 
-export const Title2 = styled.h2`
+.h2 {
   display: flex;
   justify-content: center;
-  color: blue;
+  color: rgb(252, 215, 3);
   font-size: 36px;
-`;
+}
 
-export const Title = styled.h3`
+.h3 {
   display: flex;
   justify-content: center;
   margin: 10px 10px;
-`;
+}

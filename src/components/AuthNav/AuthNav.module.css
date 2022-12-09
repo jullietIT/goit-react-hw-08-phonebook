@@ -1,9 +1,14 @@
+.NavLink {
+  max-width: 768px;
+}
+
 .link {
   display: inline-block;
   text-decoration: none;
-  padding: 12px;
+  padding: 18px;
   font-weight: 700;
-  color: #2a363b;
+  font-size: 18px;
+  color: #4419c6;
 }
 
 .link.active {

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { WrapperForm, Label, Input, Button, Title } from './ContactForm.styled';
+import css from './ContactForm.module.css';
 import { getContacts } from '../../redux/contacts/selectors';
 // Импортируем хук
 import { useDispatch, useSelector } from 'react-redux';
@@ -45,35 +45,44 @@ export const ContactForm = () => {
   };
 
   return (
-    <WrapperForm>
-      <Title>Phonebook</Title>
-      <form onSubmit={handleSubmit}>
-        <Label>
-          Name
-          <Input
-            type="text"
-            name="name"
-            value={name}
-            onChange={handleChange}
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Имя должно состоять из букв, заглавных"
-            required
-          />
-        </Label>
-        <Label>
-          Number
-          <Input
-            type="tel"
-            name="number"
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-            value={number}
-            onChange={handleChange}
-            title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
-          />
-        </Label>
+    <div>
+      <h1 className={css.title}>Phonebook</h1>
 
-        <Button type="submit">Add contact</Button>
-      </form>
-    </WrapperForm>
+      <div className={css.wrapper}>
+        <form onSubmit={handleSubmit}>
+          <label className={css.label}>
+            Name
+            <input
+              className={css.input}
+              type="text"
+              name="name"
+              value={name}
+              onChange={handleChange}
+              placeholder="create new name"
+              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+              title="Имя должно состоять из букв, заглавных"
+              required
+            />
+          </label>
+          <label className={css.label}>
+            Number
+            <input
+              className={css.input}
+              type="tel"
+              name="number"
+              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              value={number}
+              placeholder="new number"
+              onChange={handleChange}
+              title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+            />
+          </label>
+
+          <button className={css.button} type="submit">
+            Add contact
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };

@@ -1,17 +1,16 @@
 import { ContactForm } from '../components/ContactForm/ContactForm';
 import ContactList from '../components/ContactList/ContactList';
 import Filter from '../components/Filter/Filter';
-
-import { Wrapper } from '../components/App.styled';
+import css from './Contacts.module.css';
 
 export default function Contacts() {
   return (
     <>
-      <Wrapper>
+      <div className={css.Wrapper}>
         <ContactForm />
         <Filter />
         <ContactList />
-      </Wrapper>
+      </div>
     </>
   );
 }

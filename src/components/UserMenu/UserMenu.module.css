@@ -6,4 +6,15 @@
 
 .username {
   font-weight: 700;
+  color: #d0c70c;
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  color: #d0c70c;
 }
