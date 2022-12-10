@@ -8,15 +8,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   font-family: 'Bungee Inline', cursive;
-  
 }
 
 code {
   font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',
     monospace;
 }
-
-/* 
-li {
-  display: flex;
-} */

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setStatusFilter } from '../redux/filtersSlice';
+import { setStatusFilter } from '../../redux/filtersSlice';
 import { nanoid } from 'nanoid';
 import { getFilter } from '../../redux/contacts/selectors';
 import css from './Filter.module.css';
